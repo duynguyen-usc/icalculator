@@ -73,5 +73,13 @@ class icalculatorUITests: XCTestCase {
         app.buttons["1"].tap()
         app.buttons["5"].tap()
         XCTAssertEqual(true, app.staticTexts["0.0715"].exists)
+        
+        XCUIApplication().buttons["←"].tap()
+        XCUIApplication().buttons["←"].tap()
+        XCUIApplication().buttons["←"].tap()
+        XCUIApplication().buttons["←"].tap()
+        XCTAssertEqual(false, app.staticTexts["0.0715"].exists)
+        XCTAssertEqual(false, app.staticTexts["0."].exists)
+        XCTAssertEqual(true, app.staticTexts["0"].exists)
     }
 }

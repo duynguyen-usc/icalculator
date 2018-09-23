@@ -23,7 +23,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func backSpacePressed(_ sender: UIButton) {
-        display1.text = String(display1.text!.dropLast())
+        var newStr = String(display1.text!.dropLast())
+        if (newStr.hasSuffix(".")) {
+            newStr = String(newStr.dropLast())
+        }
+        display1.text = newStr
     }
     
     @IBAction func numberPressed(_ sender: UIButton) {
