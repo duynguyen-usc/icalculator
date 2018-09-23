@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clearPressed(_ sender: UIButton) {
+        display1.text = "0"
     }
     
     @IBAction func backSpacePressed(_ sender: UIButton) {
