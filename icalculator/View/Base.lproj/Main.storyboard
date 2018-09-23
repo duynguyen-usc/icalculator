@@ -373,6 +373,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="display1" destination="m3e-OV-cUj" id="7Aj-Rs-c2I"/>
+                        <outlet property="display2" destination="ry2-4n-ZH6" id="FEX-Nk-6Wf"/>
+                        <outlet property="display3" destination="QoE-04-AMK" id="bTW-gq-GOL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

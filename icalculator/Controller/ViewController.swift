@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
+    @IBOutlet weak var display1: UILabel!
+    @IBOutlet weak var display2: UILabel!
+    @IBOutlet weak var display3: UILabel!
+    
     @IBAction func numberPressed(_ sender: UIButton) {
     }
     
