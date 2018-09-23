@@ -8,6 +8,15 @@
 
 import UIKit
 
+enum Operation : Int {
+    case NONE
+    case ADD = 10
+    case SUBTRACT
+    case MULTIPLY
+    case DIVIDE
+    case EQUALS
+}
+
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
@@ -17,6 +26,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var display1: UILabel!
     @IBOutlet weak var display2: UILabel!
     @IBOutlet weak var display3: UILabel!
+    
+    var num1: Double = 0.0;
+    var num2: Double = 0.0;
+    var selectedOperation: Operation = Operation.NONE
     
     @IBAction func clearPressed(_ sender: UIButton) {
         display1.text = "0"
@@ -47,6 +60,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
+        
     }
     
     @IBAction func equalsPressed(_ sender: UIButton) {
