@@ -19,6 +19,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var display3: UILabel!
     
     @IBAction func numberPressed(_ sender: UIButton) {
+        if (display1.text == "0"){
+            display1.text = ""
+        }
+        display1.text = display1.text! + String(sender.tag)
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
