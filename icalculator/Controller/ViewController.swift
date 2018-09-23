@@ -12,11 +12,33 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     @IBAction func numberPressed(_ sender: UIButton) {
     }
     
+    @IBAction func operationPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func cmpParameterPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func clearPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func backSpacePressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func equalsPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func decimalPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func changeSignPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func percentDownPressed(_ sender: UIButton) {
+    }
 }
 
