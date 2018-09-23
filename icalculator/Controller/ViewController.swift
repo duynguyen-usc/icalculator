@@ -29,7 +29,6 @@ class ViewController: UIViewController {
     
     var num1: Double = 0.0;
     var num2: Double = 0.0;
-    var selectedOperation: Operation = Operation.NONE
     
     @IBAction func clearPressed(_ sender: UIButton) {
         display1.text = "0"

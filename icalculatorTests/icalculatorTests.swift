@@ -11,24 +11,22 @@ import XCTest
 
 class icalculatorTests: XCTestCase {
 
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    func testCalculate() {
+        
+        let c: Calculate = Calculate()
+        
+        c.n1 = 20
+        c.n2 = 10
+        c.operation = OperationType.ADD
+        XCTAssertEqual(30, c.equals())
+        
+        c.operation = OperationType.SUBTRACT
+        XCTAssertEqual(10, c.equals())
+        
+        c.operation = OperationType.MULTIPLY
+        XCTAssertEqual(200, c.equals())
+        
+        c.operation = OperationType.DIVIDE
+        XCTAssertEqual(2, c.equals())
     }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

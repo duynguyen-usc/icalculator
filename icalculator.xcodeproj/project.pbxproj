@@ -14,6 +14,8 @@
 		E1E724002157445D0043A72C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E723FE2157445D0043A72C /* LaunchScreen.storyboard */; };
 		E1E7240B2157445D0043A72C /* icalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E7240A2157445D0043A72C /* icalculatorTests.swift */; };
 		E1E724162157445D0043A72C /* icalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E724152157445D0043A72C /* icalculatorUITests.swift */; };
+		E1E72427215793AD0043A72C /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E72426215793AD0043A72C /* Calculate.swift */; };
+		E1E72428215793AD0043A72C /* Calculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E72426215793AD0043A72C /* Calculate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,7 @@
 		E1E724112157445D0043A72C /* icalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = icalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E724152157445D0043A72C /* icalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = icalculatorUITests.swift; sourceTree = "<group>"; };
 		E1E724172157445D0043A72C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E1E72426215793AD0043A72C /* Calculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Calculate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 			children = (
 				E1E723F52157445D0043A72C /* AppDelegate.swift */,
 				E1E723F72157445D0043A72C /* ViewController.swift */,
+				E1E72426215793AD0043A72C /* Calculate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -280,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E72427215793AD0043A72C /* Calculate.swift in Sources */,
 				E1E723F82157445D0043A72C /* ViewController.swift in Sources */,
 				E1E723F62157445D0043A72C /* AppDelegate.swift in Sources */,
 			);
@@ -289,6 +294,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1E72428215793AD0043A72C /* Calculate.swift in Sources */,
 				E1E7240B2157445D0043A72C /* icalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
