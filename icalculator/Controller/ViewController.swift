@@ -37,6 +37,9 @@ class ViewController: UIViewController {
         if(!display1.text!.contains(".")) {
             display1.text = display1.text! + "."
         }
+        else if (display1.text! == "0") {
+            display1.text = "0."
+        }
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
