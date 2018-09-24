@@ -91,4 +91,28 @@ class icalculatorUITests: XCTestCase {
         XCTAssertEqual(false, app.staticTexts["0."].exists)
         XCTAssertEqual(true, app.staticTexts["0"].exists)
     }
+    
+    func testAddUI() {
+        let app = XCUIApplication()
+        XCTAssertEqual(true, app.staticTexts["0"].exists)
+        
+        app.buttons["1"].tap()
+        app.buttons["+"].tap()
+        app.buttons["2"].tap()
+        app.buttons["="].tap()
+        XCTAssertEqual(true, app.staticTexts["3.0"].exists)
+        
+        app.buttons["+"].tap()
+        app.buttons["4"].tap()
+        app.buttons["4"].tap()
+        app.buttons["="].tap()
+        XCTAssertEqual(true, app.staticTexts["47.0"].exists)
+        
+        app.buttons["+"].tap()
+        app.buttons["5"].tap()
+        app.buttons["5"].tap()
+        app.buttons["4"].tap()
+        app.buttons["+"].tap()
+        XCTAssertEqual(true, app.staticTexts["601.0"].exists)
+    }
 }
