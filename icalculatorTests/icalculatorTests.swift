@@ -36,4 +36,11 @@ class icalculatorTests: XCTestCase {
         c.operation = OperationType.PERCENT_DOWN
         XCTAssertEqual(93, c.equals())
     }
+    
+    func testCompoundInterest() {
+        let cmpCalc = CompoundInterest();
+        
+        cmpCalc.setDefaults()
+        XCTAssertEqual(134488.88, cmpCalc.getFutureValue())
+    }
 }
