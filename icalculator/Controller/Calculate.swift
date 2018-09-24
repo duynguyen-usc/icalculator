@@ -10,11 +10,13 @@ import Foundation
 
 enum OperationType : Int {
     case NONE
-    case ADD = 10
+    case EQUALS = 10
+    case ADD
     case SUBTRACT
     case MULTIPLY
     case DIVIDE
-    case EQUALS
+    case CHANGE_SIGN
+    case PERCENT_DOWN
 }
 
 class Calculate {
@@ -35,6 +37,12 @@ class Calculate {
             
         case OperationType.DIVIDE:
             return n1 / n2
+            
+        case OperationType.PERCENT_DOWN:
+            return round(1000 * (n1 * (1 - 0.07)) / 1000)
+            
+        case OperationType.CHANGE_SIGN:
+            return n1 * -1
             
         default:
             return 0

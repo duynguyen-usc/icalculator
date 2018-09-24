@@ -28,5 +28,12 @@ class icalculatorTests: XCTestCase {
         
         c.operation = OperationType.DIVIDE
         XCTAssertEqual(2, c.equals())
+        
+        c.operation = OperationType.CHANGE_SIGN
+        XCTAssertEqual(-20, c.equals())
+        
+        c.n1 = 100
+        c.operation = OperationType.PERCENT_DOWN
+        XCTAssertEqual(93, c.equals())
     }
 }

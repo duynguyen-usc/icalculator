@@ -8,15 +8,6 @@
 
 import UIKit
 
-enum Operation : Int {
-    case NONE
-    case ADD = 10
-    case SUBTRACT
-    case MULTIPLY
-    case DIVIDE
-    case EQUALS
-}
-
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
