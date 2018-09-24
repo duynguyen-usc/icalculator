@@ -8,7 +8,7 @@
 
 import Foundation
 
-class CompoundInterest {
+class CmpInterestCalc {
     
     var time = 0.0
     var numTimesCompounded = 1.0

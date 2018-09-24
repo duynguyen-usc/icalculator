@@ -38,9 +38,9 @@ class icalculatorTests: XCTestCase {
     }
     
     func testCompoundInterest() {
-        let cmpCalc = CompoundInterest();
+        let cmpIntCalc = CmpInterestCalc();
         
-        cmpCalc.setDefaults()
-        XCTAssertEqual(134488.88, cmpCalc.getFutureValue())
+        cmpIntCalc.setDefaults()
+        XCTAssertEqual(134488.88, cmpIntCalc.getFutureValue())
     }
 }
