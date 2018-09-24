@@ -23,6 +23,7 @@ class ViewController: UIViewController {
     }
     
     let calculator = Calculate()
+    let cmpCalc = CmpInterestCalc()
     var calcState = CState.None
     
     @IBOutlet weak var display1: UILabel!
@@ -83,8 +84,7 @@ class ViewController: UIViewController {
         calcState = CState.Equals
     }
     
-    @IBAction func cmpParameterPressed(_ sender: UIButton) {
-    }
+    
     
     @IBAction func changeSignPressed(_ sender: UIButton) {
         calculator.n1 = getDisplayValue()
@@ -93,6 +93,26 @@ class ViewController: UIViewController {
     }
     
     @IBAction func percentDownPressed(_ sender: UIButton) {
+    }
+
+    @IBAction func nPressed(_ sender: UIButton) {
+        cmpCalc.numTimesCompounded = getDisplayValue()
+        cmpResult()
+    }
+    
+    @IBAction func termPressed(_ sender: UIButton) {
+        cmpCalc.time = getDisplayValue()
+        cmpResult()
+    }
+    
+    @IBAction func principalPressd(_ sender: UIButton) {
+        cmpCalc.principal = getDisplayValue()
+        cmpResult()
+    }
+    
+    @IBAction func interestPressed(_ sender: UIButton) {
+        cmpCalc.interestRate = getDisplayValue() / 100
+        cmpResult()
     }
     
     func getDisplayValue() -> Double {
@@ -104,6 +124,11 @@ class ViewController: UIViewController {
     
     func valueToDisplay(value: Double) {
         display1.text = String(value)
+    }
+    
+    func cmpResult() {
+        valueToDisplay(value: cmpCalc.getFutureValue())
+        calcState = CState.Equals
     }
 }
 

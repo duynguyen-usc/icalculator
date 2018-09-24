@@ -78,7 +78,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cmpParameterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="acH-rd-fDa"/>
+                                                    <action selector="nPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vZn-kc-mB2"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="21" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JA8-O3-qd7">
@@ -89,7 +89,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cmpParameterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wd2-Ff-qO9"/>
+                                                    <action selector="termPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bJH-Ta-hN9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="22" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H7W-l6-gWg">
@@ -100,7 +100,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cmpParameterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T6O-Xz-C5h"/>
+                                                    <action selector="interestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yfp-9f-Ug9"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="23" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="37j-n1-k23">
@@ -111,7 +111,7 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="cmpParameterPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sru-PK-EnN"/>
+                                                    <action selector="principalPressd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jxQ-Q0-pmY"/>
                                                 </connections>
                                             </button>
                                         </subviews>
