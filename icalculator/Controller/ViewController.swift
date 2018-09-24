@@ -87,6 +87,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func changeSignPressed(_ sender: UIButton) {
+        calculator.n1 = getDisplayValue()
+        calculator.operation = OperationType.CHANGE_SIGN
+        valueToDisplay(value: calculator.equals())
     }
     
     @IBAction func percentDownPressed(_ sender: UIButton) {

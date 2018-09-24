@@ -188,4 +188,17 @@ class icalculatorUITests: XCTestCase {
         app.buttons["="].tap()
         XCTAssertEqual(true, app.staticTexts["1.0"].exists)
     }
+    
+    func testChangeSign() {
+        let app = XCUIApplication()
+        XCTAssertEqual(true, app.staticTexts["0"].exists)
+        
+        app.buttons["5"].tap()
+        app.buttons["4"].tap()
+        app.buttons["+/-"].tap()
+        XCTAssertEqual(true, app.staticTexts["-54.0"].exists)
+        
+        app.buttons["+/-"].tap()
+        XCTAssertEqual(true, app.staticTexts["54.0"].exists)
+    }
 }
