@@ -68,6 +68,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
+        if(calcState == CState.InputtingSecondNumber){
+            calculator.n2 = getDisplayValue()
+            valueToDisplay(value: calculator.equals())
+        }
         calculator.n1 = getDisplayValue()
         calculator.operation = OperationType(rawValue: sender.tag)!
         calcState = CState.OperationSelected
