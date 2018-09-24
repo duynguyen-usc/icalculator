@@ -9,15 +9,11 @@
 import XCTest
 
 class icalculatorUITests: XCTestCase {
-
+    
     override func setUp() {
        
         continueAfterFailure = false
-
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
         XCUIApplication().launch()
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
     override func tearDown() {
@@ -26,7 +22,6 @@ class icalculatorUITests: XCTestCase {
     func testNumberButtons() {
         
         let app = XCUIApplication()
-        
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["1"].tap()
@@ -114,6 +109,10 @@ class icalculatorUITests: XCTestCase {
         app.buttons["4"].tap()
         app.buttons["+"].tap()
         XCTAssertEqual(true, app.staticTexts["601.0"].exists)
+        
+        app.buttons["1"].tap()
+        app.buttons["="].tap()
+        XCTAssertEqual(true, app.staticTexts["602.0"].exists)
     }
     
     func testSubtractUI() {
@@ -137,7 +136,34 @@ class icalculatorUITests: XCTestCase {
         app.buttons["3"].tap()
         app.buttons["7"].tap()
         app.buttons["8"].tap()
-        app.buttons["+"].tap()
+        app.buttons["-"].tap()
         XCTAssertEqual(true, app.staticTexts["-443.0"].exists)
+        
+        app.buttons["7"].tap()
+        app.buttons["4"].tap()
+        app.buttons["="].tap()
+        XCTAssertEqual(true, app.staticTexts["-369.0"].exists)
+    }
+    
+    func testMultiply() {
+        
+        let app = XCUIApplication()
+        XCTAssertEqual(true, app.staticTexts["0"].exists)
+        
+        app.buttons["7"].tap()
+        app.buttons["×"].tap()
+        app.buttons["6"].tap()
+        app.buttons["="].tap()
+        XCTAssertEqual(true, app.staticTexts["42.0"].exists)
+        
+        app.buttons["×"].tap()
+        app.buttons["6"].tap()
+        app.buttons["×"].tap()
+        XCTAssertEqual(true, app.staticTexts["252.0"].exists)
+        
+        app.buttons["9"].tap()
+        app.buttons["9"].tap()
+        app.buttons["="].tap()
+        XCTAssertEqual(true, app.staticTexts["24948.0"].exists)
     }
 }
