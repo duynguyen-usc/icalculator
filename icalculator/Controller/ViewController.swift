@@ -33,6 +33,7 @@ class ViewController: UIViewController {
     
     @IBAction func clearPressed(_ sender: UIButton) {
         display1.text = "0"
+        calcState = CState.None
     }
     
     @IBAction func backSpacePressed(_ sender: UIButton) {
@@ -83,8 +84,6 @@ class ViewController: UIViewController {
         valueToDisplay(value: calculator.equals())
         calcState = CState.Equals
     }
-    
-    
     
     @IBAction func changeSignPressed(_ sender: UIButton) {
         calculator.n1 = getDisplayValue()
