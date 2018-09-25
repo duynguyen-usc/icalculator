@@ -288,7 +288,7 @@ class icalculatorUITests: XCTestCase {
         XCTAssertEqual(true, app.staticTexts["term = 8.0"].exists)
         XCTAssertEqual(true, app.staticTexts["interest = 0.03"].exists)
         XCTAssertEqual(true, app.staticTexts["pv = 444.0"].exists)
-        XCTAssertEqual(true, app.staticTexts["fv = 564.45"].exists)
+        XCTAssertEqual(true, app.staticTexts["fv = 562.45"].exists)
         XCTAssertEqual(true, app.staticTexts["118.45"].exists)
     }
 }
