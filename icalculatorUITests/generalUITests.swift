@@ -144,4 +144,14 @@ class generalUITests: XCTestCase {
         app.buttons["+/-"].tap()
         XCTAssertEqual(true, app.staticTexts["54.0"].exists)
     }
+    
+    func testPercentDown() {
+        app.buttons["1"].tap()
+        app.buttons["0"].tap()
+        app.buttons["0"].tap()
+        XCTAssertEqual(true, app.staticTexts["100"].exists)
+        
+        app.buttons["↓%"].tap()
+        XCTAssertEqual(true, app.staticTexts["93.0"].exists)
+    }
 }

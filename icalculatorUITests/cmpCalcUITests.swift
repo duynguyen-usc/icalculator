@@ -8,7 +8,7 @@
 
 import XCTest
 
-class operatorUITests: XCTestCase {
+class cmpCalcUITests: XCTestCase {
     
     let app = XCUIApplication()
     

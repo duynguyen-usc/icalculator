@@ -93,6 +93,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func percentDownPressed(_ sender: UIButton) {
+        calculator.n1 = getDisplayValue()
+        calculator.operation = OperationType.PERCENT_DOWN
+        valueToDisplay(value: calculator.equals())
     }
 
     @IBAction func nPressed(_ sender: UIButton) {
