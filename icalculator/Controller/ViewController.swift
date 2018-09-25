@@ -20,6 +20,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        info1.text = ""
+        info2.text = ""
+        info3.text = ""
+        info4.text = ""
+        display1.text = "0"
     }
     
     let calculator = Calculate()
@@ -27,9 +32,10 @@ class ViewController: UIViewController {
     var calcState = CState.None
     
     @IBOutlet weak var display1: UILabel!
-    @IBOutlet weak var display2: UILabel!
-    @IBOutlet weak var display3: UILabel!
-    
+    @IBOutlet weak var info1: UILabel!
+    @IBOutlet weak var info2: UILabel!
+    @IBOutlet weak var info3: UILabel!
+    @IBOutlet weak var info4: UILabel!
     
     @IBAction func clearPressed(_ sender: UIButton) {
         display1.text = "0"
