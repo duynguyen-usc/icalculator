@@ -41,32 +41,28 @@ class ViewController: UIViewController {
         if (newStr.hasSuffix(".")) {
             newStr = String(newStr.dropLast())
         }
+        if (newStr == "") {
+            newStr = "0"
+        }
         display1.text = newStr
     }
     
     @IBAction func numberPressed(_ sender: UIButton) {
-        if (display1.text == "0" ||
-            calcState == CState.OperationSelected ||
-            calcState == CState.Equals){
+        if (isNewInput()) {
             display1.text = ""
         }
         display1.text = display1.text! + String(sender.tag)
-        
-        if (calcState == CState.None){
-            calcState = CState.InputtingFirstNumber
-        }
-        else if (calcState == CState.OperationSelected) {
-            calcState = CState.InputtingSecondNumber
-        }
+        updateCalcState()
     }
     
     @IBAction func decimalPressed(_ sender: UIButton) {
-        if(!display1.text!.contains(".")) {
-            display1.text = display1.text! + "."
-        }
-        else if (display1.text! == "0") {
+        if (isNewInput()){
             display1.text = "0."
         }
+        else if (!display1.text!.contains(".")) {
+            display1.text = display1.text! + "."
+        }
+        updateCalcState()
     }
     
     @IBAction func operationPressed(_ sender: UIButton) {
@@ -128,6 +124,21 @@ class ViewController: UIViewController {
     func cmpResult() {
         valueToDisplay(value: cmpCalc.getFutureValue())
         calcState = CState.Equals
+    }
+    
+    func isNewInput() -> Bool {
+        return (display1.text == "0" ||
+            calcState == CState.OperationSelected ||
+            calcState == CState.Equals)
+    }
+    
+    func updateCalcState() {
+        if (calcState == CState.None){
+            calcState = CState.InputtingFirstNumber
+        }
+        else if (calcState == CState.OperationSelected) {
+            calcState = CState.InputtingSecondNumber
+        }
     }
 }
 
