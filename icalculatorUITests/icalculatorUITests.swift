@@ -10,6 +10,8 @@ import XCTest
 
 class icalculatorUITests: XCTestCase {
     
+    let app = XCUIApplication()
+    
     override func setUp() {
        
         continueAfterFailure = false
@@ -21,7 +23,7 @@ class icalculatorUITests: XCTestCase {
 
     func testNumberButtons() {
         
-        let app = XCUIApplication()
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["1"].tap()
@@ -43,7 +45,8 @@ class icalculatorUITests: XCTestCase {
     }
     
     func testDecimalButton() {
-        let app = XCUIApplication()
+        
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["1"].tap()
@@ -88,7 +91,8 @@ class icalculatorUITests: XCTestCase {
     }
     
     func testAddUI() {
-        let app = XCUIApplication()
+        
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["1"].tap()
@@ -116,7 +120,8 @@ class icalculatorUITests: XCTestCase {
     }
     
     func testSubtractUI() {
-        let app = XCUIApplication()
+        
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["1"].tap()
@@ -147,7 +152,7 @@ class icalculatorUITests: XCTestCase {
     
     func testMultiply() {
         
-        let app = XCUIApplication()
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["7"].tap()
@@ -169,7 +174,7 @@ class icalculatorUITests: XCTestCase {
     
     func testDivide() {
         
-        let app = XCUIApplication()
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["5"].tap()
@@ -190,7 +195,8 @@ class icalculatorUITests: XCTestCase {
     }
     
     func testChangeSign() {
-        let app = XCUIApplication()
+        
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["5"].tap()
@@ -203,7 +209,8 @@ class icalculatorUITests: XCTestCase {
     }
     
     func testCmpCalc() {
-        let app = XCUIApplication()
+        
+        app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
         
         app.buttons["1"].tap()
@@ -211,5 +218,17 @@ class icalculatorUITests: XCTestCase {
         app.buttons["0"].tap()
         app.buttons["P"].tap()
         XCTAssertEqual(true, app.staticTexts["126.68"].exists)
+        
+        app.buttons["6"].tap()
+        app.buttons["I/R"].tap()
+        XCTAssertEqual(true, app.staticTexts["159.38"].exists)
+        
+        app.buttons["4"].tap()
+        app.buttons["T"].tap()
+        XCTAssertEqual(true, app.staticTexts["126.25"].exists)
+        
+        app.buttons["3"].tap()
+        app.buttons["N"].tap()
+        XCTAssertEqual(true, app.staticTexts["126.82"].exists)
     }
 }
