@@ -272,4 +272,21 @@ class icalculatorUITests: XCTestCase {
         app.buttons["C"].tap()
         XCTAssertEqual(true, app.staticTexts["0"].exists)
     }
+    
+    func testInfoLabels() {
+
+        XCTAssertEqual(false, app.staticTexts["term = 12 (n = 1)"].exists)
+        XCTAssertEqual(false, app.staticTexts["interest = 2.5%"].exists)
+        XCTAssertEqual(false, app.staticTexts["pv = 100000"].exists)
+        XCTAssertEqual(false, app.staticTexts["fv = 120,000"].exists)
+        
+        app.buttons["4"].tap()
+        app.buttons["4"].tap()
+        app.buttons["4"].tap()
+        
+        XCTAssertEqual(true, app.staticTexts["term = 12 (n = 1)"].exists)
+        XCTAssertEqual(true, app.staticTexts["interest = 2.5%"].exists)
+        XCTAssertEqual(true, app.staticTexts["pv = 444"].exists)
+        XCTAssertEqual(true, app.staticTexts["fv = 120,000"].exists)
+    }
 }
