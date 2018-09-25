@@ -33,7 +33,8 @@ class CmpInterestCalc {
     }
     
     func getGain() -> Double {
-        return getFutureValue() - principal
+        return Tools.roundToTwoDecimals(d: getFutureValue() - principal)
     }
+    
 }
 

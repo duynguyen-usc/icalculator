@@ -20,10 +20,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        info1.text = ""
-        info2.text = ""
-        info3.text = ""
-        info4.text = ""
+        clearInfoDisplay()
         display1.text = "0"
     }
     
@@ -128,8 +125,9 @@ class ViewController: UIViewController {
     }
     
     func cmpResult() {
-        valueToDisplay(value: cmpCalc.getFutureValue())
+        valueToDisplay(value: cmpCalc.getGain())
         calcState = CState.Equals
+        updateInfoDisplay()
     }
     
     func isNewInput() -> Bool {
@@ -145,6 +143,20 @@ class ViewController: UIViewController {
         else if (calcState == CState.OperationSelected) {
             calcState = CState.InputtingSecondNumber
         }
+    }
+    
+    func updateInfoDisplay() {
+        info1.text = "interest = \(cmpCalc.interestRate)"
+        info2.text = "term = \(cmpCalc.term)"
+        info3.text = "pv = \(cmpCalc.principal)"
+        info4.text = "fv = \(cmpCalc.getFutureValue())"
+    }
+    
+    func clearInfoDisplay() {
+        info1.text = ""
+        info2.text = ""
+        info3.text = ""
+        info4.text = ""
     }
 }
 
