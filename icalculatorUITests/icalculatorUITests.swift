@@ -283,10 +283,12 @@ class icalculatorUITests: XCTestCase {
         app.buttons["4"].tap()
         app.buttons["4"].tap()
         app.buttons["4"].tap()
+        app.buttons["P"].tap()
         
-        XCTAssertEqual(true, app.staticTexts["term = 12 (n = 1)"].exists)
-        XCTAssertEqual(true, app.staticTexts["interest = 2.5%"].exists)
-        XCTAssertEqual(true, app.staticTexts["pv = 444"].exists)
-        XCTAssertEqual(true, app.staticTexts["fv = 120,000"].exists)
+        XCTAssertEqual(true, app.staticTexts["term = 8.0"].exists)
+        XCTAssertEqual(true, app.staticTexts["interest = 0.03"].exists)
+        XCTAssertEqual(true, app.staticTexts["pv = 444.0"].exists)
+        XCTAssertEqual(true, app.staticTexts["fv = 564.45"].exists)
+        XCTAssertEqual(true, app.staticTexts["118.45"].exists)
     }
 }

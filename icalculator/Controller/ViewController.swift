@@ -37,6 +37,8 @@ class ViewController: UIViewController {
     @IBAction func clearPressed(_ sender: UIButton) {
         display1.text = "0"
         calcState = CState.None
+        cmpCalc.setDefaults()
+        clearInfoDisplay()
     }
     
     @IBAction func backSpacePressed(_ sender: UIButton) {
@@ -137,7 +139,7 @@ class ViewController: UIViewController {
     }
     
     func updateCalcState() {
-        if (calcState == CState.None){
+        if (calcState == CState.None || calcState == CState.Equals) {
             calcState = CState.InputtingFirstNumber
         }
         else if (calcState == CState.OperationSelected) {
