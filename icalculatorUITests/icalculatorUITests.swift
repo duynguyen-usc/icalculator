@@ -201,4 +201,15 @@ class icalculatorUITests: XCTestCase {
         app.buttons["+/-"].tap()
         XCTAssertEqual(true, app.staticTexts["54.0"].exists)
     }
+    
+    func testCmpCalc() {
+        let app = XCUIApplication()
+        XCTAssertEqual(true, app.staticTexts["0"].exists)
+        
+        app.buttons["1"].tap()
+        app.buttons["0"].tap()
+        app.buttons["0"].tap()
+        app.buttons["P"].tap()
+        XCTAssertEqual(true, app.staticTexts["126.68"].exists)
+    }
 }

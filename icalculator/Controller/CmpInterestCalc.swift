@@ -10,22 +10,22 @@ import Foundation
 
 class CmpInterestCalc {
     
-    var time = 0.0
+    var term = 8.0
     var numTimesCompounded = 1.0
-    var interestRate = 0.0
-    var principal = 0.0
+    var interestRate = 0.03
+    var principal = 100000.0
     
     func setDefaults() {
-        time = 12
+        term = 12
         numTimesCompounded = 1
         interestRate = 0.025
         principal = 100000
     }
     
     func getFutureValue() -> Double {
-        if (numTimesCompounded > 0 && interestRate > 0 && time > 0 && principal > 0){
+        if (numTimesCompounded > 0 && interestRate > 0 && term > 0 && principal > 0){
             let rate = interestRate / numTimesCompounded
-            let t = time * numTimesCompounded
+            let t = term * numTimesCompounded
             let fv = principal * pow((1 + rate), t)
             return Tools.roundToTwoDecimals(d: fv)
         }

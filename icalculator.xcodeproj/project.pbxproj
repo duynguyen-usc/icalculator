@@ -11,7 +11,6 @@
 		E13B24082158A53C00E5F1DB /* CmpInterestCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B24062158A53C00E5F1DB /* CmpInterestCalc.swift */; };
 		E13B240A2158BE2100E5F1DB /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B24092158BE2100E5F1DB /* Tools.swift */; };
 		E13B240B2158BE2100E5F1DB /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13B24092158BE2100E5F1DB /* Tools.swift */; };
-		E13BC08A215947140012AD2B /* UITestCmpCalc.swift in Sources */ = {isa = PBXBuildFile; fileRef = E13BC089215947140012AD2B /* UITestCmpCalc.swift */; };
 		E1E723F62157445D0043A72C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E723F52157445D0043A72C /* AppDelegate.swift */; };
 		E1E723F82157445D0043A72C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E723F72157445D0043A72C /* ViewController.swift */; };
 		E1E723FB2157445D0043A72C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1E723F92157445D0043A72C /* Main.storyboard */; };
@@ -43,7 +42,6 @@
 /* Begin PBXFileReference section */
 		E13B24062158A53C00E5F1DB /* CmpInterestCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CmpInterestCalc.swift; sourceTree = "<group>"; };
 		E13B24092158BE2100E5F1DB /* Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
-		E13BC089215947140012AD2B /* UITestCmpCalc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITestCmpCalc.swift; sourceTree = "<group>"; };
 		E1E723F22157445D0043A72C /* icalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = icalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1E723F52157445D0043A72C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1E723F72157445D0043A72C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,7 +128,6 @@
 			children = (
 				E1E724152157445D0043A72C /* icalculatorUITests.swift */,
 				E1E724172157445D0043A72C /* Info.plist */,
-				E13BC089215947140012AD2B /* UITestCmpCalc.swift */,
 			);
 			path = icalculatorUITests;
 			sourceTree = "<group>";
@@ -319,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1E724162157445D0043A72C /* icalculatorUITests.swift in Sources */,
-				E13BC08A215947140012AD2B /* UITestCmpCalc.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

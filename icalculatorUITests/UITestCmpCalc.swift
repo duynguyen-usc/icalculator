@@ -9,8 +9,16 @@
 import XCTest
 
 class UITestCmpCalc: XCTestCase {
-
+    
     func testPrincipal() {
+        let app = XCUIApplication()
+        
+        app.buttons["1"].tap()
+        app.buttons["0"].tap()
+        app.buttons["0"].tap()
+        app.buttons["0"].tap()
+        app.buttons["0"].tap()
+        app.buttons["P"].tap()
     }
     
     func testInterestRate() {

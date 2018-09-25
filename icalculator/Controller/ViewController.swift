@@ -101,7 +101,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func termPressed(_ sender: UIButton) {
-        cmpCalc.time = getDisplayValue()
+        cmpCalc.term = getDisplayValue()
         cmpResult()
     }
     
