@@ -148,7 +148,7 @@ class ViewController: UIViewController {
     }
     
     func updateInfoDisplay() {
-        info1.text = "interest = \(cmpCalc.interestRate)"
+        info1.text = "interest = \(Tools.roundToTwoDecimals(d: cmpCalc.interestRate * 100))%"
         info2.text = "term = \(cmpCalc.term)"
         info3.text = "pv = \(cmpCalc.principal)"
         info4.text = "fv = \(cmpCalc.getFutureValue())"
