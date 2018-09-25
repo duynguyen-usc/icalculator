@@ -142,7 +142,7 @@ class icalculatorUITests: XCTestCase {
         app.buttons["7"].tap()
         app.buttons["4"].tap()
         app.buttons["="].tap()
-        XCTAssertEqual(true, app.staticTexts["-369.0"].exists)
+        XCTAssertEqual(true, app.staticTexts["-517.0"].exists)
     }
     
     func testMultiply() {
