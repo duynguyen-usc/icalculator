@@ -10,15 +10,18 @@ import Foundation
 
 class CmpInterestCalc {
     
-    var term = 8.0
-    var numTimesCompounded = 1.0
-    var interestRate = 0.03
-    var principal = 100000.0
+    init() {
+        setDefaults()
+    }
+    var term: Double = 0.0
+    var numTimesCompounded: Double = 0.0
+    var interestRate: Double = 0.0
+    var principal:Double = 0.0
     
     func setDefaults() {
-        term = 12
-        numTimesCompounded = 1
-        interestRate = 0.025
+        term = 8
+        numTimesCompounded = 1.0
+        interestRate = 0.03
         principal = 100000
     }
     
