@@ -90,12 +90,14 @@ class ViewController: UIViewController {
         calculator.n1 = getDisplayValue()
         calculator.operation = OperationType.CHANGE_SIGN
         valueToDisplay(value: calculator.equals())
+        // calcState should stay the same in whatever it is
     }
     
     @IBAction func percentDownPressed(_ sender: UIButton) {
         calculator.n1 = getDisplayValue()
         calculator.operation = OperationType.PERCENT_DOWN
         valueToDisplay(value: calculator.equals())
+        calcState = CState.Equals
     }
 
     @IBAction func nPressed(_ sender: UIButton) {
